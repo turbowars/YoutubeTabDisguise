@@ -1,0 +1,26 @@
+{
+    "name": "Disguised Tabs",
+    "version": "2.0",
+    "manifest_version": 2,
+    "description": "Press Ctrl+Q to disguise/undisguise a tab.",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"	
+    },
+    "author": "TurboWars",
+    "permissions": [
+        "tabs", "http://*/*", "https://*/*"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "options_page": "options.html",
+    "homepage_url": "http://turbowars.com/",
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["script.js"]
+        }
+    ]
+    
+}
